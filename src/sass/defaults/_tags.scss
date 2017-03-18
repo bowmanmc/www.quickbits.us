@@ -1,0 +1,28 @@
+
+body,
+html {
+    background: $clr-highlight-alt;
+    font-family: $fontstack-body;
+    height: 100%;
+    min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontstack-headings;
+    font-weight: bold;
+}
+
+a {
+    color: $clr-link-out;
+    text-decoration: underline;
+
+    &:hover {
+        color: $clr-link-over;
+        text-decoration: underline;
+    }
+}
