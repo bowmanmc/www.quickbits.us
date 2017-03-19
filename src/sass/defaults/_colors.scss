@@ -2,6 +2,8 @@
 $rta1: #4ba94f;
 $rta2: #c1d830;
 
+$purple-dark: #3D0D2C;
+
 $clr-black: #000;
 $clr-off-white: #f6f9f6;
 $clr-white: #fff;
@@ -15,7 +17,7 @@ $clr-link-out: darken($rta1, 10%);
 $clr-link-over: $rta1;
 
 // navigation
-$clr-navbg: $clr-black;
+$clr-navbg: $purple-dark;
 $clr_navtxt: $clr-off-white;
 $clr-navborder: $clr-white;
 

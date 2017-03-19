@@ -9,7 +9,7 @@
     "sass": "node-sass --source-map true --include-path src/sass --include-path node_modules src/sass/main.scss src/styles/bundle.css",
     "postsass": "postcss -c postcss.config.json",
     "watch": "npm-run-all --parallel watch:jekyll watch:sass",
-    "watch:jekyll": "nodemon -w docs -e html,md,png,jpg,gif,svg,yml,xml,js,css,yml --ignore src/sass -x \"npm run jekyll\"",
+    "watch:jekyll": "nodemon -w src -e html,md,png,jpg,gif,svg,yml,xml,js,css,yml --ignore src/sass -x \"npm run jekyll\"",
     "watch:sass": "nodemon -e scss -w src/sass -x \"npm run sass\"",
     "server:dev": "babel-node tools/runBrowserSync.js",
     "prebuild": "rimraf build",
