@@ -1,8 +1,11 @@
 
-$rta1: #4ba94f;
-$rta2: #c1d830;
-
 $purple-dark: #3D0D2C;
+$red: #AA273A;
+$red-orange: #E25931;
+$orange: #FBA516;
+$yellow: #FDDE49;
+$blue: #4E71D4;
+$green: #5ECD5F;
 
 $clr-black: #000;
 $clr-off-white: #f6f9f6;
@@ -10,11 +13,11 @@ $clr-white: #fff;
 
 $clr-gray: #777777;
 
-$clr-highlight: $rta1;
-$clr-highlight-alt: $rta2;
+$clr-highlight: $red;
+$clr-highlight-alt: $red-orange;
 
-$clr-link-out: darken($rta1, 10%);
-$clr-link-over: $rta1;
+$clr-link-out: darken($green, 10%);
+$clr-link-over: $green;
 
 // navigation
 $clr-navbg: $purple-dark;
@@ -22,7 +25,7 @@ $clr_navtxt: $clr-off-white;
 $clr-navborder: $clr-white;
 
 // header
-$clr-headerbg: darken($rta1, 5%);
+$clr-headerbg: darken($green, 5%);
 $clr-headertxt: $clr-off-white;
 
 // icons

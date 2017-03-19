@@ -1,8 +1,9 @@
-$header-size: 83%;
+$header-size: 97%;
 .header {
     align-items: center;
-    background: $clr-headerbg url(../images/dayton-skyline.svg) no-repeat center bottom;
-    background-size: contain;
+    //background: $clr-headerbg url(../images/dayton-skyline.svg) no-repeat center bottom;
+    background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
+    background-size: cover;
     color: $clr-headertxt;
     display: flex;
     font-size: 64px;

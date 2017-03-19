@@ -1,68 +1,50 @@
+$nav-transition: all 0.35s ease-in-out;
 
 .navigation {
     background: $clr-navbg;
-    border-bottom: 1px solid $clr-highlight-alt;
-    box-shadow: 0 0 0.5em #000;
+    background-image: linear-gradient(33deg, $clr-navbg, $clr-black);
+    box-shadow: 0 0 0.5em $clr-black;
     color: $clr-navtxt;
-    padding: 1.0em 2.0em;
+    display: table;
+    padding: 0 1.0em;
     position: fixed;
     top: 0;
     width: 100%;
 
-    @include outer-container(100%);
+    .navlogo {
+        display: table-cell;
+        padding-right: 3.0em;
+        width: 165px;
 
-    a {
-        color: $clr-link-out;
-        margin: 0 0.5em;
-        text-decoration: none;
-
-        &:hover {
-            color: $clr-link-over;
+        svg {
+            height: 32px;
+            margin: 0.5em 1.0em;
+            width: 149px;
         }
     }
 
     nav {
-        padding: 0.5em;
-        text-align: center;
+        display: table-cell;
+        vertical-align: top;
 
-        @include span-columns(12);
+        a {
+            background: transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 2px solid transparent;
+            border-right: 2px solid transparent;
+            color: $clr-off-white;
+            display: inline-block;
+            padding: 1.25em 1.0em 0.65em 1.0em;
+            text-decoration: none;
+            transition: $nav-transition;
 
-        @include media($desktop) {
-            @include span-columns(4);
-            @include omega(4n);
+            &:hover {
+                background: $clr-navbg;
+                border-bottom: 3px solid $clr-highlight;
+                border-left: 2px solid transparentize($clr-black, 0.5);
+                border-right: 2px solid transparentize($clr-black, 0.5);
+                color: $clr-white;
+            }
         }
     }
-
-    .logos {
-        padding: 0.75em 0.5em;
-        text-align: center;
-
-        @include span-columns(12);
-
-        @include media($desktop) {
-            padding: 0.25em 0.5em;
-            text-align: right;
-
-            @include span-columns(4);
-            @include omega(4n);
-        }
-    }
-
-    .title {
-        padding: 0.5em;
-        text-align: center;
-
-        @include span-columns(12);
-
-        @include media($desktop) {
-            text-align: left;
-
-            @include span-columns(4);
-            @include omega(4n);
-        }
-    }
-}
-
-.navlogo {
-    margin-right: 1.0em;
 }
