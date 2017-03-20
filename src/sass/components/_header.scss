@@ -1,20 +1,42 @@
-$header-size: 97%;
+
+$header-size: 90%;
+
+@keyframes slideTagline {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
 .header {
-    align-items: center;
-    //background: $clr-headerbg url(../images/dayton-skyline.svg) no-repeat center bottom;
     background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
     background-size: cover;
     color: $clr-headertxt;
-    display: flex;
-    font-size: 64px;
-    justify-content: center;
+    margin-top: 50px;
     min-height: $header-size;
-    padding: 2.0em;
-    padding-top: 156px;
-    text-align: center;
-    text-shadow: 2px 2px 0 darken($clr-headerbg, 25%);
 
     @include media($desktop) {
         padding-top: 82px;
     }
+}
+.header__tagline {
+    animation-name: slideTagline;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.35s;
+    font-size: 64px;
+    padding: 1.0em;
+}
+
+.header__tagline01 {
+    background: $red;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+    display: inline-block;
+    font-size: 48px;
+    padding-right: 15%;
+    text-align: right;
+    width: 50%;
 }
