@@ -10,6 +10,7 @@ $nav-transition: all 0.35s ease-out;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 
     .navlogo {
         display: table-cell;

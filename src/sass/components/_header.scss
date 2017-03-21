@@ -1,5 +1,5 @@
 
-$header-size: 90%;
+$header-size: 85%;
 
 @keyframes slideTagline {
     0% {
@@ -12,14 +12,55 @@ $header-size: 90%;
 
 
 .header {
-    background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
-    background-size: cover;
-    color: $clr-headertxt;
+    background: $clr-off-white;
     margin-top: 50px;
     min-height: $header-size;
+    position: relative;
 
     @include media($desktop) {
-        padding-top: 82px;
+        //padding-top: 82px;
+    }
+
+    .tagline {
+        background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
+        background-size: cover;
+        bottom: 0;
+        //clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); // left -> right
+        //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%); // right -> left
+        clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+        color: $clr-headertxt;
+        font-size: 54px;
+        left: 0;
+        padding: 1.5em;
+        position: absolute;
+        right: 0;
+        text-shadow: 2px 2px 0 darken($clr-gray, 25%);
+        top: 0;
+        z-index: 10;
+    }
+
+    .features {
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        z-index: 20;
+    }
+
+    .feature {
+        background: #ffffff;
+        border: 1px solid $clr-highlight-alt;
+        border-radius: 0.25em;
+        box-shadow: 0 0 1.0em transparentize($clr-black, 0.85);
+        color: #222629;
+        margin: 0 1.0em;
+        padding: 1.5em;
+        width: 25%;
+
+        &:hover {
+            background: #ffffff;
+            color: $clr-black;
+        }
     }
 }
 .header__tagline {
