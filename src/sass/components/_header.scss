@@ -61,6 +61,19 @@ $header-size: 85%;
             background: #ffffff;
             color: $clr-black;
         }
+
+        h2 {
+            color: $clr-highlight;
+            font-size: 32px;
+            font-weight: bold;
+        }
+    }
+
+    .feature__icon {
+        fill: $clr-highlight;
+        height: 32px;
+        margin-right: 8px;
+        width: 32px;
     }
 }
 .header__tagline {
