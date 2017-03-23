@@ -29,7 +29,7 @@ $header-size: 85%;
         //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%); // right -> left
         clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
         color: $clr-headertxt;
-        font-size: 54px;
+        font-size: 3.3em;
         left: 0;
         padding: 1.5em;
         position: absolute;
@@ -64,7 +64,7 @@ $header-size: 85%;
 
         h2 {
             color: $clr-highlight;
-            font-size: 32px;
+            font-size: 2.0em;
             font-weight: bold;
         }
     }
