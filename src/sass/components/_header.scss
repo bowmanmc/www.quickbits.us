@@ -1,32 +1,17 @@
 
 $header-size: 85%;
 
-@keyframes slideTagline {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
 .header {
     background: $clr-off-white;
     margin-top: 50px;
     min-height: $header-size;
     position: relative;
 
-    @include media($desktop) {
-        //padding-top: 82px;
-    }
 
     .tagline {
         background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
         background-size: cover;
         bottom: 0;
-        //clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); // left -> right
-        //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%); // right -> left
         clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
         color: $clr-headertxt;
         font-size: 3.3em;
@@ -75,22 +60,4 @@ $header-size: 85%;
         margin-right: 8px;
         width: 32px;
     }
-}
-.header__tagline {
-    animation-name: slideTagline;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-    animation-duration: 0.35s;
-    font-size: 64px;
-    padding: 1.0em;
-}
-
-.header__tagline01 {
-    background: $red;
-    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
-    display: inline-block;
-    font-size: 48px;
-    padding-right: 15%;
-    text-align: right;
-    width: 50%;
 }
