@@ -5,11 +5,9 @@ $nav-transition: all 0.35s ease-out;
     background-image: linear-gradient(33deg, $clr-navbg, $clr-black);
     box-shadow: 0 0 0.5em $clr-black;
     color: $clr-navtxt;
-    display: table;
+    display: flex;
     font-size: 14px;
-    padding: 0 1.0em;
     position: fixed;
-    top: 0;
     width: 100%;
     z-index: 100;
 
@@ -18,32 +16,28 @@ $nav-transition: all 0.35s ease-out;
     }
 
     .navlogo {
-        display: table-cell;
-        padding-right: 12px;
-        vertical-align: middle;
-        width: 76px;
-
-        @include media($desktop) {
-            width: 175px;
-            padding-right: 24px;
-        }
+        padding: 0.5em;
 
         svg {
             height: 24px;
-            margin: 0.75em 0.5em;
-            width: 132px;
+            width: 127px;
 
             @include media($desktop) {
                 height: 32px;
-                margin: 0.5em 1.0em;
                 width: 149px;
             }
         }
     }
 
     nav {
-        display: table-cell;
-        vertical-align: middle;
+        flex: 1;
+        padding: 0.75em 0.5em 0.25em 1.0em;
+        text-align: right;
+
+        @include media($desktop) {
+            padding: 0 0 0 1.5em;
+            text-align: left;
+        }
 
         a {
             background: transparentize($clr-off-white, 0.75);

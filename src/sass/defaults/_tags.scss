@@ -4,7 +4,10 @@ html {
     background: $clr-highlight-alt;
     font-family: $fontstack-body;
     height: 100%;
+    max-width: 100%;
     min-height: 100%;
+    width: 100%;
+    overflow-x: scroll;
 }
 
 h1,

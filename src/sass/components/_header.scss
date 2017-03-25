@@ -1,46 +1,73 @@
 
-$header-size: 85%;
+$header-size: 65%;
+$header-size-desktop: 85%;
 
 .header {
     background: $clr-off-white;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
     min-height: $header-size;
-    position: relative;
+    margin-top: 25px;
 
+    @include media($desktop) {
+        margin-top: 50px;
+        min-height: $header-size-desktop;
+        position: relative;
+    }
 
     .tagline {
         background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
         background-size: cover;
-        bottom: 0;
-        clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
         color: $clr-headertxt;
-        font-size: 3.3em;
-        left: 0;
-        padding: 1.5em;
-        position: absolute;
-        right: 0;
+        font-size: 2.0em;
+        line-height: 1.25em;
+        height: $header-size;
+        padding: 125px 0.5em 150px 0.5em;
         text-shadow: 2px 2px 0 darken($clr-gray, 25%);
-        top: 0;
-        z-index: 10;
+
+        @include media($desktop) {
+            background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
+            background-size: cover;
+            bottom: 0;
+            clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+            color: $clr-headertxt;
+            font-size: 3.3em;
+            left: 0;
+            padding: 1.5em;
+            position: absolute;
+            right: 0;
+            text-shadow: 2px 2px 0 darken($clr-gray, 25%);
+            top: 0;
+            z-index: 10;
+        }
     }
 
     .features {
-        bottom: 0;
         display: flex;
-        justify-content: center;
-        position: absolute;
-        z-index: 20;
+        flex-direction: column;
+
+        @include media($desktop) {
+            bottom: 0;
+            flex-direction: row;
+            justify-content: center;
+            position: absolute;
+            z-index: 20;
+        }
     }
 
     .feature {
         background: #ffffff;
-        border: 1px solid $clr-highlight-alt;
-        border-radius: 0.25em;
-        box-shadow: 0 0 1.0em transparentize($clr-black, 0.85);
         color: #222629;
-        margin: 0 1.0em;
-        padding: 1.5em;
-        width: 25%;
+        padding: 0.5em;
+
+        @include media($desktop) {
+            border: 1px solid $clr-highlight-alt;
+            border-radius: 0.25em;
+            box-shadow: 0 0 1.0em transparentize($clr-black, 0.85);
+            margin: 0 1.0em;
+            padding: 1.5em;
+            width: 25%;
+        }
 
         &:hover {
             background: #ffffff;
