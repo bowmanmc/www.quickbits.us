@@ -22,10 +22,9 @@ h6 {
 
 a {
     color: $clr-link-out;
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
         color: $clr-link-over;
-        text-decoration: underline;
     }
 }

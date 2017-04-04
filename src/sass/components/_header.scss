@@ -58,7 +58,7 @@ $header-size-desktop: 85%;
     .feature {
         background: #ffffff;
         color: #222629;
-        padding: 0.5em;
+        padding: 0.5em 1.0em;
 
         @include media($desktop) {
             border: 1px solid $clr-highlight-alt;

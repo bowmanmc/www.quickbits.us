@@ -16,8 +16,8 @@ $clr-gray: #777777;
 $clr-highlight: $red;
 $clr-highlight-alt: $red-orange;
 
-$clr-link-out: darken($green, 10%);
-$clr-link-over: $green;
+$clr-link-out: $red;
+$clr-link-over: lighten($red, 10%);
 
 // navigation
 $clr-navbg: $purple-dark;
