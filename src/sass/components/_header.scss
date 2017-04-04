@@ -16,13 +16,14 @@ $header-size-desktop: 85%;
     }
 
     .tagline {
-        background: $clr-black url(../images/headerbg-02.jpg) no-repeat center center;
+        background: $clr-black url(../images/headerbg-mobile-02.jpg) no-repeat center center;
         background-size: cover;
         color: $clr-headertxt;
-        font-size: 2.0em;
+        font-size: 2.5em;
         line-height: 1.25em;
         height: $header-size;
         padding: 125px 0.5em 150px 0.5em;
+        text-align: center;
         text-shadow: 2px 2px 0 darken($clr-gray, 25%);
 
         @include media($desktop) {
@@ -31,9 +32,9 @@ $header-size-desktop: 85%;
             bottom: 0;
             clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
             color: $clr-headertxt;
-            font-size: 3.3em;
+            font-size: 3.75em;
             left: 0;
-            padding: 1.5em;
+            padding: 1.0em;
             position: absolute;
             right: 0;
             text-shadow: 2px 2px 0 darken($clr-gray, 25%);
@@ -65,7 +66,6 @@ $header-size-desktop: 85%;
             border-radius: 0.25em;
             box-shadow: 0 0 1.0em transparentize($clr-black, 0.85);
             margin: 0 1.0em;
-            padding: 1.5em;
             width: 25%;
         }
 
