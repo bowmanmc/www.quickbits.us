@@ -15,14 +15,23 @@ $header-size-desktop: 85%;
         position: relative;
     }
 
+    .lede {
+        font-size: 2.5em;
+        font-weight: bold;
+        line-height: 1.25em;
+        margin-bottom: 1.0em;
+
+        @include media($desktop) {
+            font-size: 3.75em;
+        }
+    }
+
     .tagline {
         background: $clr-black url(../images/headerbg-mobile-02.jpg) no-repeat center center;
         background-size: cover;
         color: $clr-headertxt;
-        font-size: 2.5em;
-        font-weight: bold;
         line-height: 1.25em;
-        padding: 125px 0.5em 150px 0.5em;
+        padding: 75px 1.0em 1.0em 1.0em;
         text-align: center;
         text-shadow: 2px 2px 0 darken($clr-gray, 25%);
 
@@ -32,9 +41,7 @@ $header-size-desktop: 85%;
             bottom: 0;
             clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
             color: $clr-headertxt;
-            font-size: 3.75em;
             left: 0;
-            padding: 1.0em;
             position: absolute;
             right: 0;
             text-shadow: 2px 2px 0 darken($clr-gray, 25%);
@@ -87,5 +94,18 @@ $header-size-desktop: 85%;
         height: 32px;
         margin-right: 8px;
         width: 32px;
+    }
+}
+
+.header__button {
+    background: $clr-highlight;
+    border-radius: 0.5em;
+    color: $clr-off-white;
+    display: inline-block;
+    padding: 0.5em 1.0em;
+
+    &:hover {
+        background: $clr-highlight-alt;
+        color: $clr-white;
     }
 }
