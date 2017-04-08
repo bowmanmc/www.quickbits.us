@@ -41,9 +41,9 @@
 }
 
 .footer__logo {
-    height: 65px;
+    @include logo(3);
+
     margin-right: 0.5em;
-    width: 300px;
 }
 
 .footer__cfd {

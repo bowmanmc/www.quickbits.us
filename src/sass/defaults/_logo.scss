@@ -1,0 +1,6 @@
+
+@mixin logo($scale) {
+    fill: $clr-off-white;
+    height: 250px / $scale;
+    width: 747px / $scale;
+}
