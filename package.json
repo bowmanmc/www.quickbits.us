@@ -9,13 +9,15 @@
     "sass": "node-sass --source-map true --include-path src/sass --include-path node_modules src/sass/main.scss src/styles/bundle.css",
     "postsass": "postcss -c postcss.config.json",
     "watch": "npm-run-all --parallel watch:jekyll watch:sass",
-    "watch:jekyll": "nodemon -w src -e html,md,png,jpg,gif,svg,yml,xml,js,css,yml --ignore src/sass -x \"npm run jekyll\"",
+    "watch:jekyll": "nodemon -V -w src -e html,md,png,jpg,gif,svg,yml,xml,js,css,yml --ignore src/sass -x \"npm run jekyll\"",
     "watch:sass": "nodemon -e scss -w src/sass -x \"npm run sass\"",
     "server:dev": "babel-node tools/runBrowserSync.js",
     "prebuild": "rimraf build",
     "build": "npm-run-all sass jekyll",
     "prestart": "npm run build",
-    "start": "npm-run-all --parallel server:dev watch"
+    "start": "npm-run-all --parallel server:dev watch",
+    "predeploy": "npm-run-all build",
+    "deploy": "s3-deploy './build/**' --cwd './build/' --region us-east-2 --bucket www.quickbits.us"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
     "postcss-cli": "^2.6.0",
     "prismjs": "^1.6.0",
     "rimraf": "^2.5.4",
+    "s3-deploy": "^0.7.5",
     "sass-lint": "^1.10.2"
   }
 }
